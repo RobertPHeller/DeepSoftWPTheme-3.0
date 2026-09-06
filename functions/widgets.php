@@ -267,7 +267,7 @@
       extract( $args );
       echo $before_widget;
       echo $before_title . $after_title;
-      <?php include( "https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696" ); ?>
+      include( "https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696" );
       echo $after_widget;
     }
   }
