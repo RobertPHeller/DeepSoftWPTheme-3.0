@@ -267,27 +267,7 @@
       extract( $args );
       echo $before_widget;
       echo $before_title . $after_title;
-      echo '<div id="SingleBestsellerWidget-Content" align="center">';
-      echo '</div>';
-      echo '<script>';
-      echo 'var url = "https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696";';
-      echo 'var method = "GET";';
-      echo 'var async = true;';
-      echo 'var request = new XMLHttpRequest();';
-      echo 'request.onreadystatechange = function() {';
-      echo 'if (request.readyState != 4) {';
-      echo 'return;';
-      echo '}';
-      echo 'var status = parseInt(request.status);';
-      echo 'var errorInfo = null;';
-      echo 'var response = request.response;';
-      echo 'document.getElementById("SingleBestsellerWidget-Content").innerHTML = response;';
-      echo '};';
-      echo 'request.open(method, url, async);';
-      echo 'request.send();';
-      echo '</script>';
-      #include( "https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696" );
-      #echo '<iframe src="https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696"></iframe>';
+      <?php include( "https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696" ); ?>
       echo $after_widget;
     }
   }
