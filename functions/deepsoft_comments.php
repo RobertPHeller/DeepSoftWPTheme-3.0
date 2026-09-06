@@ -4,12 +4,12 @@
  *
  * Holds functions and filters for displaying comments
  *
- * @package      Deepsoft V2
+ * @package      Deepsoft V3
  * @author       Robert Heller <heller@deepsoft.com> (code lifted from Techozoic Fluid by Jeremy Clark <jeremy@clark-technet.com>)
  */
 
 /**
- * Deepsoft V2 comment callback
+ * Deepsoft V3 comment callback
  * 
  * Callback for displaying comments
  * 

@@ -376,6 +376,9 @@ function theme_options_validate( $input ) {
 	// Say our textarea option must be safe text with the allowed tags for posts
 	// $input['sometextarea'] = wp_filter_post_kses( $input['sometextarea'] );
 	$input['custom_styles'] = wp_filter_post_kses( $input['custom_styles'] );
+        $input['headerContent'] = wp_filter_post_kses( $input['headerContent'] );
+        $input['footerContent'] = wp_filter_post_kses( $input['footerContent'] );
+        $input['bottomwidecontent'] = wp_filter_post_kses( $input['bottomwidecontent'] );
 	return $input;
 }
 
