@@ -127,7 +127,7 @@
 				__('Display Google Ad Sense Blocks', 
 					'deepsoft') );
       $control_ops = array( 'google_ad_width' => 300, 'google_ad_height' => 350,
-			    'google_ad_slot' => 'dwsgoogleadsense');
+			    'google_ad_slot' => '');
       /* Create the widget. */
       parent::__construct( 'dwsgoogleadsense',
 			   __('Display Google Ad Sense Blocks', 'deepsoft'),
@@ -141,20 +141,6 @@
       /* Before widget (defined by themes). */
       echo $before_widget;
       $opts = get_option("deepsoft3_theme_options");
-      switch ($opts['google_ad_type']) {
-      case 's':
-        ?><script type="text/javascript"><!--
-                  google_ad_client = "<?php echo $opts['google_ad_client']; ?>";
-                  google_ad_slot = "<?php echo $instance['google_ad_slot']; ?>";
-                  google_ad_width = <?php echo $instance['google_ad_width']; ?>;
-                  google_ad_height = <?php echo $instance['google_ad_height']; ?>;
-                  //--> 
-          </script>
-          <script type="text/javascript"
-           src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script><?php
-         break;
-      case 'a':
         ?><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <ins class="adsbygoogle"
              style="display:inline-block;width:<?php echo $instance['google_ad_width']; ?>px;height:<?php echo $instance['google_ad_height']; ?>px"
@@ -163,8 +149,6 @@
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script><?php
-        break;
-      }
       /* After widget (defined by themes). */
       echo $after_widget;
     }
@@ -174,20 +158,6 @@
 	'google_ad_width' => 0,
 	'google_ad_height' => 0), $atts ) );
       $opts = get_option("deepsoft3_theme_options");
-      switch ($opts['google_ad_type']) {
-      case 's':
-        $result  = '<script type="text/javascript"><!--
-                      google_ad_client = "'.$opts['google_ad_client'].'";
-                      google_ad_slot = "'.$google_ad_slot.'";
-                      google_ad_width = '.$google_ad_width.';
-                      google_ad_height = '.$google_ad_height.';
-                      //-->
-                    </script>
-                    <script type="text/javascript"
-                       src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                    </script>';
-         break;
-       case 'a':
          $result  = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <ins class="adsbygoogle"
              style="display:inline-block;width:'.$google_ad_width.'px;height:'.$google_ad_height.'px"
@@ -196,8 +166,6 @@
           <script>
              (adsbygoogle = window.adsbygoogle || []).push({});
           </script>';
-         break;
-      }
       return $result;
     }
     /**

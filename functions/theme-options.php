@@ -209,17 +209,6 @@ function theme_options_do_page() {
 					</td>
 				</tr>
                                 <?php
-                                  deepwoods_rbs(__('Google Adsense code type:',
-                                                   'deepsoft'),
-                                                   array(__('Synchronous',
-                                                            'deepsoft' ) 
-                                                            => 's',
-                                                            __('Asynchronous',
-                                                               'deepsoft' ) 
-                                                            => 'a'),
-                                                'google_ad_type',
-                                                $options['google_ad_type'],
-                                                's');
 				/**
 				 * A deepsoft3 select input option
 				 */
