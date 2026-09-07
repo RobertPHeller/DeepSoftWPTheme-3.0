@@ -126,8 +126,8 @@
 			   'description' => 
 				__('Display Google Ad Sense Blocks', 
 					'deepsoft') );
-      $control_ops = array( 'width' => 300, 'height' => 350,
-			    'id_base' => 'dwsgoogleadsense');
+      $control_ops = array( 'google_ad_width' => 300, 'google_ad_height' => 350,
+			    'google_ad_slot' => 'dwsgoogleadsense');
       /* Create the widget. */
       parent::__construct( 'dwsgoogleadsense',
 			   __('Display Google Ad Sense Blocks', 'deepsoft'),
@@ -267,7 +267,29 @@
       extract( $args );
       echo $before_widget;
       echo $before_title . $after_title;
-      include( "https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696" );
+      //echo '<div id="SingleBestsellerWidget-Content" align="center">';
+      //echo '</div>';
+      //echo '<script>';
+      //echo 'var url = "https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696";';
+      //echo 'var method = "GET";';
+      //echo 'var async = true;';
+      //echo 'var request = new XMLHttpRequest();';
+      //echo 'request.onreadystatechange = function() {';
+      //echo 'if (request.readyState != 4) {';
+      //echo 'return;';
+      //echo '}';
+      //echo 'var status = parseInt(request.status);';
+      //echo 'var errorInfo = null;';
+      //echo 'var response = request.response;';
+      //echo 'console.log(response);';
+      //echo 'document.getElementById("SingleBestsellerWidget-Content").innerHTML = response;';
+      //echo '};';
+      //echo 'request.open(method, url, async);';
+      //echo 'request.send();';
+      //echo '</script>';
+      //include( "https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696" );
+      //echo '<iframe src="https://www.drivethrurpg.com/single_bestseller_widget.php?affiliate_id=83696"></iframe>';
+      echo "Not presently working...";
       echo $after_widget;
     }
   }
